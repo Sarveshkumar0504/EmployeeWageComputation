@@ -40,5 +40,96 @@ namespace EmployeeWageComputation
             Console.WriteLine("Emp Wage:" + empWage);
             Console.ReadLine();
         }
+
+        public static void PartTimeEmpWage()
+        {
+            int IS_PART_TIME = 1;
+            int IS_FULL_TIME = 2;
+            int EMP_RATE_PER_HOURS = 20;
+            int empHrs = 8;
+            int empWage = 0;
+            Random random = new Random();
+            int empCheck = random.Next(0, 3);
+            if (empCheck == IS_PART_TIME)
+                empHrs = 4;
+            else if (empCheck == IS_FULL_TIME)
+                empHrs = 8;
+            empWage = empHrs * EMP_RATE_PER_HOURS;
+            Console.WriteLine("Emp Wage: " + empWage);
+            Console.ReadLine();
+        }
+
+        public const int IS_PART_TIME = 1;
+        public const int IS_FULL_TIME = 2;
+        public const int EMP_RATE_PER_HOUR = 20;
+        public const int NUM_OF_WORKING_DAYS = 20;
+        public const int MAX_HRS_IN_MONTH = 120;
+        public static void CalculateWageSwitchCase()
+        {
+
+            //variables
+            int empHrs = 0;
+            int totalEmpHrs = 0;
+            int totalWorkingDays = 0;
+            while (totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS)
+            {
+                totalWorkingDays++;
+                Random random = new Random();
+                int empCheck = random.Next(0, 3);
+                switch (empCheck)
+                {
+                    case IS_PART_TIME:
+                        empHrs = 4;
+                        break;
+                    case IS_FULL_TIME:
+                        empHrs = 8;
+                        break;
+                    default:
+                        empHrs = 0;
+                        break;
+                }
+                totalEmpHrs += empHrs;
+                Console.WriteLine("Days#: " + totalWorkingDays + " Emp Hrs : " + empHrs);
+            }
+            int totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
+            Console.WriteLine("Total Emp Wage: " + totalEmpWage);
+        }
+
+        public const int IS_PART_TIME1 = 1;
+        public const int IS_FULL_TIME1 = 2;
+        public const int
+            EMP_RATE_PER_HOURS = 20;
+        public const int
+            NUM_OF_WORKING_DAY = 2;
+        public static void CalculateWagesFor20DaysInMonth()
+        {
+            int empHrs = 0;
+            int empWage = 0;
+            int totalEmpWage = 0;
+            for (int day = 0; day < NUM_OF_WORKING_DAY; day++)
+            {
+                Random random = new Random();
+                int empCheck = random.Next(0, 3);
+                switch (empCheck)
+                {
+                    case IS_PART_TIME1:
+                        empHrs = 4;
+                        break;
+                    case IS_FULL_TIME1:
+                        empHrs = 8;
+                        break;
+                    default:
+                        empHrs = 0;
+                        break;
+                }
+                empWage = empHrs * EMP_RATE_PER_HOURS;
+                totalEmpWage += empWage;
+                Console.WriteLine("Emp Wage: " + empWage);
+                Console.WriteLine("Total Emp Wage: " + totalEmpWage);
+            }
+        }
+
+
     }
+
 }
