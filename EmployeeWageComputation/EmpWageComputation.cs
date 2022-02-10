@@ -40,5 +40,23 @@ namespace EmployeeWageComputation
             Console.WriteLine("Emp Wage:" + empWage);
             Console.ReadLine();
         }
+
+        public static void PartTimeEmpWage()
+        {
+            int IS_PART_TIME = 1;
+            int IS_FULL_TIME = 2;
+            int EMP_RATE_PER_HOURS = 20;
+            int empHrs = 8;
+            int empWage = 0;
+            Random random = new Random();
+            int empCheck = random.Next(0, 3);
+            if (empCheck == IS_PART_TIME)
+                empHrs = 4;
+            else if (empCheck == IS_FULL_TIME)
+                empHrs = 8;
+            empWage = empHrs * EMP_RATE_PER_HOURS;
+            Console.WriteLine("Emp Wage: " + empWage);
+            Console.ReadLine();
+        }
     }
 }

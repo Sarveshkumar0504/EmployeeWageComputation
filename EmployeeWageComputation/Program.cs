@@ -14,6 +14,7 @@ namespace EmployeeWageComputation
             EmpWageComputation emp = new EmpWageComputation();
             EmpWageComputation.ISEmployeePresent();
             EmpWageComputation.EmpWage();
+            EmpWageComputation.PartTimeEmpWage();
       
             Console.ReadKey (); 
         }
