@@ -14,7 +14,11 @@ namespace EmployeeWageComputation
             EmpWageComputation emp = new EmpWageComputation();
             EmpWageComputation.ISEmployeePresent();
             EmpWageComputation.EmpWage();
-      
+            EmpWageComputation.PartTimeEmpWage();
+            EmpWageComputation.CalculateWageSwitchCase();
+            EmpWageComputation.CalculateWagesFor20DaysInMonth();
+            EmpWageComputation.CalculateWageTill100HrsOr20IsReached();
+
             Console.ReadKey (); 
         }
     }
