@@ -13,6 +13,7 @@ namespace EmployeeWageComputation
             Console.WriteLine(" Welcome to EmployeeWageComputation ");
             EmpWageComputation emp = new EmpWageComputation();
             EmpWageComputation.ISEmployeePresent();
+            EmpWageComputation.EmpWage();
       
             Console.ReadKey (); 
         }
